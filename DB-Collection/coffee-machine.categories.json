@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "6526899ceec000a41f1416bf"
+  },
+  "name": "coffee",
+  "description": null,
+  "status": 1,
+  "createDate": {
+    "$date": "2023-10-11T11:40:12.631Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652689cceec000a41f1416c2"
+  },
+  "name": "tea",
+  "description": null,
+  "status": 1,
+  "createDate": {
+    "$date": "2023-10-11T11:41:00.212Z"
+  },
+  "__v": 0
+}]

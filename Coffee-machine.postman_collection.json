@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "4339c1d2-a661-440f-b144-f2a7ea36e462",
+		"name": "Coffee-machine",
+		"description": "# 🔐 Get started here\n\nPostman supports a range of [authorization](https://learning.postman.com/docs/sending-requests/authorization/) mechanisms to enable you to communicate securely with APIs.\n\nThis template contains examples of different types of authorization that are ready to be modified to fit your use case.\n\n- **Basic Auth:** This simple authorization method uses a username and password combination to grant access to API resources. Postman offers a built-in Basic Auth helper that makes it easy to include the required credentials in your API requests.\n    \n\n- **OAuth 1.0 & OAuth 2.0:** Postman supports both versions of the OAuth protocol, which involve complex flows including obtaining request tokens, user authorization, and exchanging tokens for access tokens. Postman streamlines this process by handling server-side interactions, managing tokens, and offering pre-built authorization helpers.\n    \n\n- **Bearer Token:** Commonly used with OAuth 2.0, this method involves sending a token in the request header to authenticate with the API.\n    \n\n- **API Key:** Postman supports API Key authorization, which requires including a unique key in the request headers or as a query parameter.\n    \n\n- **Digest Auth:** This method employs a challenge-response mechanism to ensure secure communication with APIs.\n    \n\n- **Hawk Authentication:** Postman supports the Hawk authorization method, which utilizes time-based, one-time-use tokens for secure API access.\n    \n\n## 🔖 **How to use this template**\n\n**Step 1:** Select the request for your relevant authorization type.\n\n**Step 2:** Check out the documentation for the selected request to learn more about the type of authorization and how to use it.\n\n**Step 3:** Complete the relevant details for your selected authorization type.\n\n(Note: The correct data values will be determined by your API on the server side. If you're using a third-party API, refer to the provider's documentation for more details about the required authorization type.)\n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27)  \n[REST API basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=ddb19591-3097-41cf-82af-c84273e56719&sourceTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "884582"
+	},
+	"item": [
+		{
+			"name": "Add Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "tea",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/admin/item-category",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"admin",
+						"item-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "SPIRITS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/admin/item-category?pageNo=1&size=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"admin",
+						"item-category"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "tea",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/admin/item-category/652689cceec000a41f1416c2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"admin",
+						"item-category",
+						"652689cceec000a41f1416c2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "6500557a777b3b3812c721b7",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{fantasy_url}}/admin/item-category/status/update",
+					"host": [
+						"{{fantasy_url}}"
+					],
+					"path": [
+						"admin",
+						"item-category",
+						"status",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Menu",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Flat White",
+							"type": "text"
+						},
+						{
+							"key": "categoryId",
+							"value": "6526899ceec000a41f1416bf",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Flat White are a classic Italian type of coffee drink made of espresso, steamed milk, and thick foam in equal parts. The name comes from the resemblance to the hoods worn by Capuchin monks. Making cappuccino is relatively easy and can be done at home too if you know how to make espresso. And if you don’t then you can follow Our Guide To Home Espresso to learn how to make it.",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "99",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/admin/menu/add-menu",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"admin",
+						"menu",
+						"add-menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{host}}/admin/menu/get-menu?pageNo=1&size=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"admin",
+						"menu",
+						"get-menu"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "categoryId",
+							"value": "6500557a777b3b3812c721b7",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Menu",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "650d78bdaaa344dc561cc3d7",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{fantasy_url}}/admin/menu/status/update",
+					"host": [
+						"{{fantasy_url}}"
+					],
+					"path": [
+						"admin",
+						"menu",
+						"status",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Menu",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_elvalue}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test02552007007",
+							"type": "text"
+						},
+						{
+							"key": "categoryId",
+							"value": "6500557a777b3b3812c721b7",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "SOURDEED BREAD/AVOCADO/TOMATO CONFIT/POCHE EGG\n",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "venueId",
+							"value": "650147c72190733aba659f26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/admin/menu/update-menu/650553993021f5f3004028b7",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"admin",
+						"menu",
+						"update-menu",
+						"650553993021f5f3004028b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"menu\": [\r\n    {\r\n      \"menuId\": \"65268b7347c6c3d053d678b2\",\r\n      \"quantity\": 5\r\n    },\r\n    {\r\n      \"menuId\": \"65268b8d47c6c3d053d678b6\",\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/reservation",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/reservation?pageNo=1&size=10&date=",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"reservation"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "date",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "googleSheetId",
+			"value": "Google sheet id",
+			"type": "string"
+		},
+		{
+			"key": "googleClientId",
+			"value": "Google client id",
+			"type": "string"
+		},
+		{
+			"key": "googleClientSecret",
+			"value": "Google client secret",
+			"type": "string"
+		},
+		{
+			"key": "githubAccessToken",
+			"value": "Github Personal Access Token",
+			"type": "string"
+		},
+		{
+			"key": "jwtSecret",
+			"value": "JWT signing secret",
+			"type": "string"
+		},
+		{
+			"key": "nasaApiKey",
+			"value": "NASA API Key",
+			"type": "string"
+		},
+		{
+			"key": "hawkId",
+			"value": "dh37fgj492je",
+			"type": "string"
+		},
+		{
+			"key": "hawkKey",
+			"value": "werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn",
+			"type": "string"
+		},
+		{
+			"key": "digestUsername",
+			"value": "postman",
+			"type": "string"
+		},
+		{
+			"key": "digestPassword",
+			"value": "password",
+			"type": "string"
+		},
+		{
+			"key": "oauth1Key",
+			"value": "RKCGzna7bv9YD57c",
+			"type": "string"
+		},
+		{
+			"key": "oauth1Secret",
+			"value": "D+EdQ-gs$-%@2Nu7",
+			"type": "string"
+		}
+	]
+}

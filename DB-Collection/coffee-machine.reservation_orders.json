@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "65268cc7273c9cccd64e5cb8"
+  },
+  "reservationId": {
+    "$oid": "65268cc7273c9cccd64e5cb6"
+  },
+  "menuId": {
+    "$oid": "65268b7347c6c3d053d678b2"
+  },
+  "description": null,
+  "quantity": 5,
+  "price": 9,
+  "discount": 0,
+  "totalPrice": 45,
+  "createDate": {
+    "$date": "2023-10-11T11:53:43.662Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65268cc7273c9cccd64e5cb9"
+  },
+  "reservationId": {
+    "$oid": "65268cc7273c9cccd64e5cb6"
+  },
+  "menuId": {
+    "$oid": "65268b8d47c6c3d053d678b6"
+  },
+  "description": null,
+  "quantity": 2,
+  "price": 9,
+  "discount": 0,
+  "totalPrice": 18,
+  "createDate": {
+    "$date": "2023-10-11T11:53:43.662Z"
+  },
+  "__v": 0
+}]

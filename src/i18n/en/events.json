@@ -1,0 +1,44 @@
+{
+    "category": {
+        "add": "Category has been created successfully",
+        "update": "Category has been updated",
+        "delete": "Category status has been updated",
+        "error": "Error: Category not created!"
+    },
+    "venue": {
+        "add": "Vanue has been created successfully",
+        "update": "Vanue has been updated",
+        "delete": "Vanue status has been updated",
+        "isEmail": "Email is already exists",
+        "error": "Error: Vanue not created!"
+    },
+    "menu": {
+        "add": "Menu has been created successfully",
+        "update": "Menu has been updated",
+        "delete": "Menu status has been updated",
+        "error": "Error: Menu not created!"
+    },
+    "asset": {
+        "add": "Asset has been created successfully",
+        "update": "Asset has been updated",
+        "delete": "Asset status has been updated",
+        "error": "Error: Asset not created!"
+    },
+    "reservation": {
+        "add": "Order has been created successfully",
+        "update": "Order has been updated",
+        "delete": "Order has been updated",
+        "error": "Error: Order not created!"
+    },
+    "login": {
+        "email": "Email not exists",
+        "password": "Email & password does not match",
+        "delete": "User status has been updated",
+        "error": "Error: Asset not created!",
+        "success": "Successfully loggedin"
+    },
+    "list": "Successfully listed",
+    "error_status": "Invalid status",
+    "update": "Successfully updated",
+    "bad_Request": "Bad Request"
+}
